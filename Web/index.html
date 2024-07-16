@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Battaglia Navale</title>
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+            font-family: Arial, sans-serif;
+            background-image: url('sfondo.png'); /* Inserisci il percorso dell'immagine di sfondo */
+            background-size: cover;
+            background-position: center;
+            display: flex;
+
+            height: 100vh;
+            flex-direction: column; /* Per allineare verticalmente i contenuti */
+        }
+
+        header {
+            width: 100%;
+            background-color: rgba(0, 0, 0, 0.5); /* Imposta il colore di sfondo della barra di navigazione */
+            padding: 10px 0; /* Aggiungi spazio interno sopra e sotto la barra di navigazione */
+            text-align: center; /* Centra gli elementi nella barra di navigazione */
+        }
+
+        header button {
+            margin: 0 10px; /* Aggiungi margine ai bottoni */
+            padding: 10px 20px;
+            font-size: 20px;
+            cursor: pointer;
+	    color: #ffffff;
+            /*color: #16ddf7;*/
+            /*background-color: #ffffff;*/
+	    background-color: rgba(0, 0, 0, 0);
+            border: none;
+        }
+
+        .content {
+            text-align: center;
+            color: #ffffff; /* Cambia il colore del testo del titolo principale */
+            margin-top: 20px; /* Aggiungi spazio sopra il contenuto */
+        }
+        p {
+            color: #ffffff; /* Cambia il colore del testo del titolo principale */
+            padding-left : 200px;
+            padding-right : 200px;
+            font-size: 1.2rem;            
+        }
+    </style>
+</head>
+<body>
+
+<header>
+    <button onclick="openHome()">Home</button>
+    <button onclick="openTeoria()">Teoria</button>
+    <button onclick="openManuale()">Manuale</button>
+    <button onclick="openGioco()">Gioco</button>
+</header>
+
+<div class="content">
+    <h1>Battaglia Navale</h1>
+    
+    <div>
+        <p>Benvenuto alla pagina della Battaglia Navale. <br>
+ Qui troverai informazioni, guide e il gioco stesso.<br>
+
+</p>
+
+ <img src="Images\bot.png" alt="Descrizione dell'immagine" width="500px">
+ <img src="Images\Proiezione.png" alt="Descrizione dell'immagine" width="500px" >
+<p>Battaglia Navale è un classico gioco da tavolo di strategia e abilità mentale che ha appassionato generazioni di giocatori.<br>
+In questo gioco, i partecipanti si sfidano a colpi di missile cercando di colpire e affondare le navi nemiche prima che queste ultime facciano lo stesso con le proprie navi.<br>
+
+Ogni giocatore posiziona le sue navi segretamente su una griglia di dimensioni predefinite. <br>Successivamente, i giocatori si alternano nel tentativo di indovinare la posizione delle navi nemiche sparando contro le caselle della griglia. <br>
+L'obiettivo è affondare tutte le navi avversarie prima che le proprie vengano distrutte.<br>
+
+Con il nostro adattamento digitale del gioco, potrai vivere l'emozione di Battaglia Navale direttamente dal tuo dispositivo, giocando contro il computer.<br>
+Preparati a mettere alla prova la tua strategia, la tua astuzia e la tua abilità nel guidare la tua flotta alla vittoria!<br>
+
+</p>
+ 
+<img src="Images\unimi.jpg" alt="Descrizione dell'immagine" width="300px">
+
+<p><Geometria Computazionale <br>
+A.A. 2023/2024 <br>
+Corso di Geometria Computazionale <br>
+Docente: Alberto Alzati <br>
+Studente: Francesco Ciccone 14335A <br> </p>
+
+
+
+    </div>
+</div>
+
+<script>
+    function openHome() {
+        window.location.href = "index.html";
+    }
+
+    function openTeoria() {
+        window.location.href = "teoria.html";
+    }
+
+    function openManuale() {
+        window.location.href = "manuale.html";
+    }
+
+    function openGioco() {
+        window.location.href = "gioco.html";
+    }
+</script>
+
+</body>
+</html>

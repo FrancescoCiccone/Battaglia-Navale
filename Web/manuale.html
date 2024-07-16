@@ -1,0 +1,164 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Battaglia Navale</title>
+    <style>
+        body {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            margin: 0;
+            font-family: Arial, sans-serif;
+            background-image: url('sfondo.png'); /* Inserisci il percorso dell'immagine di sfondo */
+            background-size: cover;
+            background-position: center;  
+            flex-direction: column;          
+        }
+
+        .content {
+            text-align: center;
+            padding: 10px;
+            border-radius: 10px;
+            /* background-color: rgba(54, 186, 239, 0.8); Aggiunge un leggero sfondo bianco trasparente */
+        }
+
+        h1 {
+            color: #ffffff; /* Cambia il colore del testo del titolo principale */
+            padding-left : 200px;
+            padding-right : 200px;
+            font-size: 1.8rem;            
+        }
+
+ 	h2{
+            color: #ffffff; /* Cambia il colore del testo del titolo principale */
+            padding-left : 200px;
+            padding-right : 200px;
+            font-size: 1.5rem;            
+        }
+
+        p {
+            color: #ffffff; /* Cambia il colore del testo del titolo principale */
+            padding-left : 200px;
+            padding-right : 200px;
+            font-size: 1.2rem;            
+        }
+
+ header {
+            width: 100%;
+            background-color: rgba(0, 0, 0, 0.5); /* Imposta il colore di sfondo della barra di navigazione */
+            padding: 10px 0; /* Aggiungi spazio interno sopra e sotto la barra di navigazione */
+            text-align: center; /* Centra gli elementi nella barra di navigazione */
+        }
+
+        header button {
+            margin: 0 10px; /* Aggiungi margine ai bottoni */
+            padding: 10px 20px;
+            font-size: 20px;
+            cursor: pointer;
+	    color: #ffffff;
+            /*color: #16ddf7;*/
+            /*background-color: #ffffff;*/
+	    background-color: rgba(0, 0, 0, 0);
+            border: none;
+        }
+       
+    </style>
+</head>
+<body>
+<header>
+    <button onclick="openHome()">Home</button>
+    <button onclick="openTeoria()">Teoria</button>
+    <button onclick="openManuale()">Manuale</button>
+    <button onclick="openGioco()">Gioco</button>
+</header>
+
+<div class="content">
+
+    <h1>Regolamento e manuale di gioco</h1>
+<h2>Regolamento</h2>
+    <p><strong>Obiettivo del gioco</strong><br>
+        Il primo giocatore che riesce ad affondare tutte le navi avversarie vince la partita.</p>
+
+    <p><strong>Equipaggiamento</strong><br>
+        Ciascun giocatore possiede due griglie. Una griglia (non visibile al giocatore avversario) sulla quale devono essere posizionate le proprie navi ed un’ulteriore griglia sulla quale saranno segnati gli attacchi effettuati, distinguendo tra quelli andati a buon fine e quelli andati a vuoto. Le navi disponibili per ciascun giocatore sono:<br>
+•Portaerei (lunghezza: 5 caselle)<br>
+•Corazzata (lunghezza: 4 caselle)<br>
+•Incrociatore e Sottomarino (entrambe lunghe 3 caselle)<br>
+•Nave d’assalto (lunghezza: 2 caselle).<br>
+</p>
+
+    <p><strong>Preparazione</strong><br>
+        Il gioco è progettato per essere giocato da un giocatore contro un computer.
+Ciascun giocatore dispone le proprie navi sulla griglia segreta, posizionandole orizzontalmente o verticalmente, ma mai in diagonale. Una volta posizionate, non è possibile modificare la disposizione. Durante la fase di posizionamento, il computer colloca le navi in maniera casuale sulla sua griglia segreta, rispettando le regole di non posizionamento diagonale e senza possibilità di modifica una volta stabilite le posizioni. 
+</p>
+
+    <p><strong>Come giocare</strong><br>
+       Una volta posizionate tutte le navi, il gioco inizia con il turno del giocatore che seleziona una cella sulla griglia avversaria per effettuare un attacco. <br>
+Ogni giocatore deve cercare di individuare le posizioni delle navi del giocatore avversario e colpirle.<br>
+Se nella cella selezionata si trova una nave avversaria essa verrà colpita e verrà evidenziata la cella con un colore rosso sulla griglia di attacco, in caso contrario, la cella viene oscurata.<br>
+Non è possibile selezionare una cella già selezionata in precedenza.<br>
+Dopo un attacco (ovvero dopo aver selezionato la cella avversaria e aver ottenuto un “colpito” o un “mancato”) termina il rispettivo turno e tocca all’avversario effettuare la stessa operazione.<br>
+Durante il proprio turno, il computer seleziona una cella casuale sulla griglia avversaria per effettuare un attacco. Se il colpo precedente è andato a segno, il bot proverà a colpire una delle celle adiacenti, continuando in quella direzione, altrimenti proverà le altre celle adiacenti.<br>
+Attenzione: solo nel momento in cui verranno colpite TUTTE le celle che occupa una determinata nave, essa verrà considerata affondata, altrimenti essa verrà considerata ancora in gioco.<br>
+</p>
+
+    <p><strong>Vittoria</strong><br>
+        Il giocatore che affonda tutte e 5 le navi avversarie per primo vince la partita!</p>
+    <h2>Manuale di gioco</h2>
+<p>Quando si entra nella sezione di gioco, si aprirà una schermata con tre pulsanti: "Gioca", "Manuale" e "Opzioni".</p>
+
+ <img src="Images\menu.png" alt="Descrizione dell'immagine" width="800px">
+
+<p>Il pulsante "Manuale" fornirà istruzioni dettagliate sulle regole del gioco, che sono anche disponibili in questa sezione.<br>
+Tramite le opzioni sarà possibile modificare il volume di gioco.<br>
+Per iniziare la partita, bisogna selezionare il pulsante "Gioca".<br>
+Posizionamento delle Navi:</p>
+
+ <img src="Images\posizionaNavi.png" alt="Descrizione dell'immagine" width="800px">
+
+<p>Il gioco inizia con il posizionamento delle navi. Cliccando su una delle 100 caselle disponibili è possibil posizionare la nave.<br>
+Una volta posizionata la nave, essa può essere ruotata con l'apposito bottone situato in basso a sinistra dello schermo. Dopo aver scelto la posizione della prima nave, premendo il pulsante "Avanti" sarà possibile posizionare la nave successiva.<br>
+Ricorda che non è possibile posizionare la nave al di fuori dell'area di gioco.<br>
+Una volta completata la fase di posizionamento delle navi, inizia la fase di gioco. <br>
+Bisogna selezionare una cella da attaccare. Il colpo potrà essere "mancato" oppure "colpito".<br>
+</p>
+
+ <img src="Images\attacco.png" alt="Descrizione dell'immagine" width="800px">
+
+<p>Dopo ogni attacco, il computer risponderà di conseguenza, eseguendo la stessa manovra. </p>
+
+ <img src="Images\bot.png" alt="Descrizione dell'immagine" width="800px">
+
+<p>Quando vengono colpite tutte le celle occupate da una nave, essa verrà dichiarata “affondata”, portando quindi a decrementare le navi rimanenti.<br>
+In qualsiasi momento della partita è possibile visualizzare la proiezione del campo di gioco avversario su un piano, cliccando sulla tastiera la freccia verso l'alto. Questa proiezione mostra i colpi andati a segno e le navi affondate.</p>
+
+ <img src="Images\Proiezione.png" alt="Descrizione dell'immagine" width="800px">
+
+<p>Il gioco termina quando tutte le navi di uno dei due giocatori sono state affondate.<br>
+
+<strong>Buon divertimento e che vinca il miglior stratega! </strong>
+</p>
+
+</div>
+<script>
+    function openHome() {
+        window.location.href = "index.html";
+    }
+
+    function openTeoria() {
+        window.location.href = "teoria.html";
+    }
+
+    function openManuale() {
+        window.location.href = "manuale.html";
+    }
+
+    function openGioco() {
+        window.location.href = "gioco.html";
+    }
+</script>
+
+</body>
+</html>

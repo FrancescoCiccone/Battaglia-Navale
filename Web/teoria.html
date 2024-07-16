@@ -1,0 +1,357 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Teoria</title>
+    <style>
+        body {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            margin: 0;
+            font-family: Arial, sans-serif;
+            background-image: url('sfondo.png'); /* Inserisci il percorso dell'immagine di sfondo */
+            background-size: cover;
+            background-position: center;     
+
+            flex-direction: column;           
+        }
+
+        .content {
+            text-align: center;
+            padding: 10px;
+            border-radius: 10px;
+            /* background-color: rgba(54, 186, 239, 0.8); Aggiunge un leggero sfondo bianco trasparente */
+        }
+
+        h1 {
+            color: #ffffff; /* Cambia il colore del testo del titolo principale */
+            padding-left : 200px;
+            padding-right : 200px;
+            font-size: 1.8rem;            
+        }
+
+        p {
+            color: #ffffff; /* Cambia il colore del testo del titolo principale */
+            padding-left : 200px;
+            padding-right : 200px;
+            font-size: 1.3rem;            
+        }
+       
+	p1 {
+            color: #ffffff; /* Cambia il colore del testo del titolo principale */
+            padding-left : 200px;
+            padding-right : 200px;
+            font-size: 1.4rem;            
+        }
+
+	bodyy {
+            color: #ffffff; /* Cambia il colore del testo del titolo principale */
+            padding-left : 200px;
+            padding-right : 200px;
+            font-size: 1rem;            
+        }
+header {
+            width: 100%;
+            background-color: rgba(0, 0, 0, 0.5); /* Imposta il colore di sfondo della barra di navigazione */
+            padding: 10px 0; /* Aggiungi spazio interno sopra e sotto la barra di navigazione */
+            text-align: center; /* Centra gli elementi nella barra di navigazione */
+        }
+
+        header button {
+            margin: 0 10px; /* Aggiungi margine ai bottoni */
+            padding: 10px 20px;
+            font-size: 20px;
+            cursor: pointer;
+	    color: #ffffff;
+            /*color: #16ddf7;*/
+            /*background-color: #ffffff;*/
+	    background-color: rgba(0, 0, 0, 0);
+            border: none;
+        }
+
+    </style>
+</head>
+<body>
+<header>
+    <button onclick="openHome()">Home</button>
+    <button onclick="openTeoria()">Teoria</button>
+    <button onclick="openManuale()">Manuale</button>
+    <button onclick="openGioco()">Gioco</button>
+</header>
+<div class="content">
+
+    <h1>Teoria</h1>
+
+    <p><strong>Introduzione alla geometria proiettiva</strong><br>
+       La geometria proiettiva è una branca della geometria che studia le proprietà degli enti geometrici invarianti tramite proiezioni. Questa disciplina si distingue per la sua natura intrinseca e invariantistica, poiché si concentra sulle proprietà geometriche che rimangono costanti nonostante le trasformazioni proiettive.<br>
+
+A differenza della geometria euclidea, che si basa su concetti come lunghezze e angoli, la geometria proiettiva pone maggiore enfasi sulle relazioni di incidenza e sulla conservazione delle proporzioni. In altre parole, anziché concentrarsi sulle misure, si concentra sulla disposizione spaziale dei punti e delle linee, e su come queste relazioni cambiano tramite proiezione.<br>
+
+Uno dei concetti fondamentali della geometria proiettiva è quello di punto all'infinito. In questo contesto, la retta all'infinito ( = insieme dei punti all’infinito di un piano proiettivo) è trattata come una retta ordinaria, consentendo un trattamento uniforme, permettendo di estendere il concetto di intersezione anche a situazioni che sarebbero problematiche nella geometria euclidea.
+
+La geometria proiettiva ha numerose applicazioni in vari campi, tra cui la grafica computerizzata, la fotografia, la cartografia e l'ingegneria. Le sue proprietà di invarianza tramite trasformazioni proiettive la rendono preziosa per la rappresentazione accurata di oggetti tridimensionali su supporti bidimensionali, nonché per la modellazione e l'analisi di sistemi complessi.
+</b>
+</p>
+
+    <p><strong>Rappresentazione piana di oggetti tridimensionali</strong><br>
+        L’idea alla base della geometria proiettiva può essere pensata informalmente come la rappresentazione su uno schermo bidimensionale di un oggetto collocato in uno spazio tridimensionale. Si guarda questo oggetto da un punto esterno V simulando il punto di vista di un occhio umano.</p>
+
+ <img src="Images\GeomProiettiva.jfif" alt="Descrizione dell'immagine">
+
+    <p>Per farlo si prende il punto P appartenente all’oggetto che si vuole rappresentare e lo si unisce a V, la retta generata interseca lo schermo nel punto P’.<br>
+P’ è la rappresentazione sullo schermo del punto P.<br>
+Si fa lo stesso con tutti gli altri punti e alla fine si ottiene nello schermo una rappresentazione dell’oggetto tridimensionale.<br>
+Tale rappresentazione in generale non è 1 a 1, dato che possono esser presenti segmenti che finiscono nello stesso punto del piano.<br>
+Negli oggetti tridimensionali ci sono dei punti che non possono essere rappresentati sullo schermo. Viceversa, per poter rappresentare in maniera realistica un oggetto del tipo visto prima in figura si devono individuare e disegnare sullo schermo dei punti, tipo P’, che però non provengono da punti dell’oggetto che stiamo guardando. <br>
+Spiegheremo ora meglio questo fenomeno.<br>
+
+Consideriamo un piano nello spazio affine euclideo tridimensionale che si chiama piano terra.<br>
+Tracciamo su tale piano una retta che si chiama linea di terra.<br>
+Consideriamo un altro piano, il piano dello schermo, che passa per la linea di terra e forma con il piano precedente un angolo di 90°.<br>
+</p>
+
+ <img src="Images\Proiettivita1.png" alt="Descrizione dell'immagine">
+
+<p>Prendiamo un punto E e consideriamo la linea dell’orizzonte che è l’intersezione del piano schermo con il piano parallelo al piano terra e passa per E.</p>
+
+ <img src="Images\Proiettivita2.png" alt="Descrizione dell'immagine">
+
+<p>Andando a considerare il segmento in figura ed intersecandolo con la linea dell’orizzonte si ottiene il punto di vista PV.</p>
+
+ <img src="Images\Proiettivita3.png" alt="Descrizione dell'immagine">
+
+<p>Supponiamo di voler rappresentare sul piano un tappetino del seguente tipo:</p>
+
+ <img src="Images\Proiettivita4.png" alt="Descrizione dell'immagine">
+
+<p>In cui i due lati più corti sono paralleli al segmento LT mentre quelli lunghi sono perpendicolari ad LT.<br>
+La tecnica per rappresentarlo è considerare ogni punto di tale tappetino e andarlo ad unire con E. Vengono presi in considerazione i punti corrispondenti intersecati con il piano dello schermo.<br>
+Si può dimostrare che se si prolungano i due lati orizzontali del tappetino si ottengono 2 punti sulla linea di terra e se si uniscono tali punti con il punto di vista il tappetino viene rappresentato nella maniera seguente.
+</p>
+
+ <img src="Images\Proiettivita5.png" alt="Descrizione dell'immagine">
+
+<p>Per rappresentare esattamente la figura che vogliamo riprodurre bisogna considerare il punto di fuga, cioè il punto sulla linea dell’orizzonte distante dal punto di vista tanto quanto la distanza di E da PV.</p>
+
+ <img src="Images\Proiettivita6.png" alt="Descrizione dell'immagine">
+
+<p>Quindi avremo una situazione come quella in figura:</p>
+
+ <img src="Images\Proiettivita7.png" alt="Descrizione dell'immagine">
+
+<p>Supponendo di avere una coppia di binari ferroviari invece del tappeto, dal punto E si vedrà che i binari si incontrano in un certo punto.</p>
+
+ <img src="Images\Proiettivita10.png" alt="Descrizione dell'immagine">
+
+<p>Quindi un punto che non esiste nello spazio viene rappresentato con un punto che sullo schermo esiste.<br>
+Ci vuole un meccanismo che consenta di calcolare le corrette posizioni di tali punti che non possono provenire da punti esistenti dallo spazio tridimensionale.<br>
+Per risolvere il problema evidenziato precedentemente supponiamo di ricreare la stessa situazione ambientandola in un piano, invece che nello spazio. <br>
+Consideriamo una retta che funge da schermo s, un’altra retta r ed un punto E (esterno ad entrambe).<br>
+Supponiamo di voler rappresentare un oggetto unidimensionale, per es. un segmento di r, su s.<br>
+C’è un punto sulla retta r che non potrà mai essere rappresentato sulla retta s e viceversa c’è un punto sulla retta s che non sarà mai raggiunto da nessun punto della retta r.
+</p>
+
+ <img src="Images\Proiettivita91.png" alt="Descrizione dell'immagine">
+
+<p>Quindi la corrispondenza fatta proiettando r su s da E non è una corrispondenza biunivoca.<br>
+C’è un punto su r che non ha immagine su s (indicato con H) e un altro su s che non ha contro immagine su r (indicato con K).<br>
+Ciò che faremo quindi è considerare qualcosa di più grande del piano affine euclideo che si chiamerà piano proiettivo reale P2(R) che includerà E2, tale piano conterrà tutti i punti di E2 più altri punti chiamati punti impropri o punti all’infinito. In questo modo potremo aggiungere un punto alla retta s e alla retta r. Precisamente: alla retta s sarà aggiunto un punto improprio che indica la sua direzione e lo stesso sarà fatto per la retta r. Così facendo si creerà una corrispondenza biunivoca. <br>
+Ad H faremo corrispondere il punto improprio di s. A K faremo corrispondere il punto improprio di r.
+</p>
+
+
+
+
+<p><strong>Componenti Unity impiegate</strong><br>
+Prima di analizzare la geometria proiettiva impiegata nel progetto, esaminiamo gli strumenti di Unity che verranno utilizzati.</p>
+
+<p><strong>La telecamera</strong><br>
+La telecamera di un videogioco opera in modo leggermente diverso rispetto a una telecamera del mondo reale: anziché vedere indiscriminatamente tutto ciò che si trova davanti ad essa, è limitata a renderizzare soltanto ciò che rientra all'interno di un particolare volume chiamato frustum di visione. Questo approccio è adottato per ottimizzare l'utilizzo delle risorse hardware e facilitare la gestione dell'ambiente di gioco. <br>
+In geometria il frustum è una figura particolare: che ricorda una piramide a cui è stato tagliato il vertice.
+</p>
+
+ <img src="Images\frustum.gif" alt="Descrizione dell'immagine">
+
+<p>Ovviamente avremo la possibilità di regolare le dimensioni del frustum di visione, adattandolo così alle nostre esigenze.</p>
+
+ <img src="Images\camera.png" alt="Descrizione dell'immagine">
+
+<p><strong>Piano di proiezione</strong><br>
+Come oggetto primitivo su cui effettuare la proiezione è stato utilizzato il piano.
+La primitiva di piano predefinita in Unity è un quadrato piatto con spigoli lunghi dieci unità, diviso in 200 triangoli, ed è orientato nel piano xz dello spazio delle coordinate locali. Il quadrato è testurizzato in modo che l'immagine completa appaia una volta all'interno del quadrato.<br>
+La texture di un piano viene renderizzata solo da un lato. Dalla parte opposta la texture del piano è trasparente. Nel contesto delle coordinate, è utile immaginare che l'asse x sia rappresentato dalla freccia rossa, l'asse y dalla freccia verde e l'asse z dalla freccia blu. Questa rappresentazione consente di visualizzare chiaramente l'orientamento all'interno dello spazio tridimensionale di Unity.
+</p>
+
+ <img src="Images\piano.png" alt="Descrizione dell'immagine">
+
+<p><strong>Texture</strong><br>
+Per la proiezione è stata utilizzata uno speciale tipo di texture chiamato render texture che una volta creata ed applicata viene aggiornata in real-time. </p>
+
+ <img src="Images\render.png" alt="Descrizione dell'immagine">
+
+<p><strong>Geometria proiettiva in Battaglia Navale</strong><br>
+Nella presente sezione, esploreremo l'applicazione della geometria proiettiva nel progetto “Battaglia Navale” sviluppato su Unity.<br>
+Esamineremo le trasformazioni geometriche coinvolte nella visualizzazione della scena, le prospettività utilizzate e le motivazioni dietro le scelte di prospettive nel contesto del gioco.<br>
+La prospettività è una proiettività ottenuta proiettando un piano su un altro da un punto esterno nello spazio.<br>
+In particolare, ci concentreremo sulla rappresentazione delle viste tra il piano di gioco e il punto di vista del nemico, esaminando le prospettività utilizzate e le relative implicazioni geometriche. <br>
+Le trasformazioni geometriche nel nostro progetto includono la trasformazione dallo spazio del mondo allo spazio della telecamera (matrice di vista) e la proiezione prospettica sul piano schermo (matrice di proiezione).
+</p>
+
+<p><strong>Proiezione prospettica</strong><br>
+Ci sono due tipi principali di proiezione utilizzati in grafica 3D: <br>
+•proiezione ortografica <br>
+•proiezione prospettica <br>
+La proiezione ortografica proietta gli oggetti senza alcuna considerazione della loro distanza dalla telecamera, mantenendo quindi le proporzioni. <br>
+All’interno del progetto viene utilizzata la proiezione prospettica, essa è un metodo utilizzato in arte e grafica per rappresentare tridimensionalità su una superficie bidimensionale, come un foglio di carta o uno schermo. Si basa su principi geometrici e ottici che simulano la percezione visiva umana, dove gli oggetti più distanti appaiono più piccoli e si avvicinano progressivamente a un punto di fuga, che è un punto immaginario verso cui le linee parallele sembrano convergere. Ci sono vari tipi di proiezione prospettica, ma uno dei più comuni e quello utilizzato nel nostro caso, è il metodo della prospettiva centrale o prospettiva lineare. In questo metodo, si definisce un punto di vista o una telecamera virtuale nello spazio tridimensionale e si proiettano i punti dell'oggetto tridimensionale su un piano di proiezione (lo schermo) attraverso questa telecamera. Le linee che collegano i punti dell'oggetto al punto di vista vengono estese fino a incontrare il piano di proiezione, creando così una rappresentazione prospettica dell'oggetto. 
+ </p>
+
+<p><strong>Prospettività utilizzate nel progetto </strong><br>
+La proiezione prospettica viene utilizzata per proiettare il piano di gioco tridimensionale su un piano schermo bidimensionale, simulando la vista del campo di gioco dal punto di vista del nemico.
+Si definisce analiticamente utilizzando la matrice di proiezione in Unity, che trasforma le coordinate tridimensionali del piano di gioco nelle coordinate bidimensionali del piano schermo. 
+</p>
+
+ <img src="Images\pianoBattaglia.png" alt="Descrizione dell'immagine">
+
+<p>Supponiamo che il punto di vista della telecamera sia E, il punto P nel mondo sia il punto che si desidera proiettare, il punto P’ sia il punto proiettato e il piano di proiezione sia π. <br>
+
+Utilizzeremo 2 matrici:
+</p>
+
+ <img src="Images\Proiettivita11.png" alt="Descrizione dell'immagine">
+
+<p><strong>Matrice di Vista (M_view) </strong><br></p>
+
+ <img src="Images\Proiettivita12.png" alt="Descrizione dell'immagine">
+<p>
+La matrice di vista, indicata come M_vista è una parte fondamentale del processo di rendering grafico in un motore di gioco o in un'applicazione di grafica 3D. Serve a trasformare le coordinate dei vertici degli oggetti dallo spazio del mondo allo spazio della telecamera.<br>
+In sostanza, la matrice di vista rappresenta la posizione e l'orientamento della telecamera nello spazio del mondo. Essa definisce il sistema di coordinate della telecamera, permettendo al motore grafico di interpretare la scena dalla prospettiva della telecamera.
+Regolando la posizione e l'orientamento della telecamera, è possibile cambiare l'angolo di visualizzazione e la prospettiva degli oggetti nella scena.<br>
+</p>
+
+<p><strong>Calcolo della matrice di vista (o posizione della telecamera):</strong><br>
+Se la telecamera è posta in E, allora la matrice di vista sarà:</p>
+
+ <img src="Images\mvista.png" alt="Descrizione dell'immagine">
+
+<p>La matrice di vista M_vista è composta da quattro righe e quattro colonne. Le prime tre righe (denotate come u, v, n) rappresentano i vettori di base del sistema di coordinate della telecamera, che definiscono la sua direzione e orientamento. La quarta riga rappresenta la posizione della telecamera nel mondo.<br>
+u rappresenta la direzione dell'asse x della telecamera, v rappresenta la direzione dell'asse y e n rappresenta la direzione dell'asse z.<br>
+E è il vettore di posizione della telecamera nello spazio del mondo.
+In sostanza, questa matrice rappresenta la trasformazione che trasferisce il mondo nel sistema di riferimento della telecamera. 
+</p>
+
+<p><strong>Matrice di Proiezione (M_proiezione)</strong><br></p>
+
+ <img src="Images\Proiettivita13.png" alt="Descrizione dell'immagine">
+
+<p>
+La matrice di proiezione (M_proiezione) definisce come la scena 3D viene proiettata sullo schermo bidimensionale. Rappresenta la trasformazione delle coordinate dallo spazio della telecamera allo spazio dello schermo (nel nostro caso il piano su cui viene effettuata la proiezione). <br>
+Questa trasformazione simula la proiezione prospettica della scena tridimensionale sullo schermo bidimensionale, creando l'illusione della profondità, rendendo gli oggetti più distanti più piccoli e applicando effetti di prospettiva. <br>
+La matrice di proiezione è fondamentale per realizzare la proiezione prospettica. Viene applicata a tutte le geometrie nello spazio della telecamera per proiettarle correttamente sullo schermo. <br>
+Le operazioni coinvolte nella matrice di proiezione includono la definizione del campo visivo (FOV), il rapporto d'aspetto (aspect ratio), la distanza dal piano di proiezione (near plane) e la distanza massima di visualizzazione (far plane). <br>
+Il Field of View (FOV), o campo visivo, rappresenta l'ampiezza dell'angolo visivo catturato dalla telecamera. In pratica, determina quanto dell'ambiente circostante sarà visibile nella scena. Un FOV più ampio permette di vedere più nell'ambiente circostante, mentre un FOV più stretto limita la visione a un'area più concentrata. <br>
+L’Aspect Ratio ovvero rapporto d'aspetto è il rapporto tra la larghezza e l'altezza dell'area di visualizzazione. Ad esempio, un'area con un rapporto d'aspetto di 16:9 significa che la larghezza è 16 unità e l'altezza è 9 unità. Questo determina la forma dell'area di visualizzazione e influenza l'aspetto visivo della scena. <br>
+Near Clipping Plane e Far Clipping Plane: Questi piani definiscono la distanza minima e massima dalla telecamera oltre la quale gli oggetti non saranno visualizzati. Gli oggetti più vicini della distanza “Near Clipping Plane” e gli oggetti più lontani della distanza “Far Clipping Plane” non saranno visibili nella scena.
+</p>
+
+ 
+ <img src="Images\Proiettivita14.png" alt="Descrizione dell'immagine">
+
+
+<p>Per una proiezione prospettica con un FOV(field of view) di θ, un rapporto di aspetto aspect (aspect ratio), e distanze di visualizzazione vicine e lontane near e far (near clipping plane e far clipping plane), la matrice di proiezione sarà:</p>
+
+ <img src="Images\mproiezione.png" alt="Descrizione dell'immagine">
+
+<p><strong>Metodi per calcolare le coordinate del punto proiettato P’</strong><br>
+Possiamo sfruttare due metodi per calcolare le coordinate del punto proiettato sul piano di proiezione:<br>
+1) Intersezione della retta con il piano: <br>
+Questo metodo è più esplicito e illustra i principi geometrici alla base della proiezione.<br>
+2) Moltiplicazione per le matrici di vista e proiezione: <br>
+Questo metodo è più conciso e rappresenta l'approccio utilizzato nella pratica con librerie grafiche.<br>
+</p>
+
+<p><strong>1)Intersezione della retta con il piano</strong><br>
+Per calcolare esattamente le coordinate del punto proiettato P’ sul piano di proiezione, possiamo seguire una procedura che coinvolge l'intersezione della retta dal punto di vista E al punto P con il piano di proiezione. Il piano di proiezione è scelto ortogonale all'asse z negativo. <br>
+Supponendo di avere già il punto P espresso in coordinate omogenee, allora possiamo calcolare le coordinate del punto proiettato P’ sul piano di proiezione utilizzando le coordinate omogenee fornite. <br>
+Le coordinate omogenee includono una quarta coordinata w.  <br>
+Supponiamo che il punto P(proprio quindi con la quarta coordinata non nulla) sia espresso come (x, y, z, w). Possiamo eseguire il seguente procedimento per calcolare le coordinate del punto proiettato P′ sul piano di proiezione. <br>
+Per effettuare la normalizzazione delle coordinate omogenee dividiamo le coordinate (x, y, z) per w ottenendo le coordinate tridimensionali non omogenee:</p>
+
+ <img src="Images\p.png" alt="Descrizione dell'immagine">
+
+<p>
+Utilizzando le coordinate non omogenee di P e del punto di vista E, calcoliamo il vettore direzionale normalizzato d (retta dal punto di vista E al punto P) come:
+</p>
+
+ <img src="Images\d.png" alt="Descrizione dell'immagine">
+
+<p>
+Troviamo il parametro t che rappresenta il punto di intersezione della retta con il piano di proiezione. Poiché il piano di proiezione è ortogonale all'asse z negativo, possiamo calcolare t come:
+</p>
+ <img src="Images\t.png" alt="Descrizione dell'immagine">
+<p>
+Per calcolare le coordinate del punto di intersezione P′ sul piano di proiezione utilizziamo il parametro t per calcolare le coordinate (Px′,Py′) del punto P′ come: <br>
+Px′=Ex+t⋅dx <br>
+Py′=Ey+t⋅dy <br>
+Pz′=0 <br>
+Le coordinate Px′, Py′, 0 rappresentano le coordinate del punto proiettato P′ sul piano di proiezione.
+</p>
+
+<p><strong>2)Moltiplicazione per le matrici di vista e proiezione</strong><br>
+
+Moltiplichiamo le coordinate del punto P (proprio, con la quarta coordinata non nulla che possiamo quindi supporre uguale ad 1) per la matrice di vista e la matrice di proiezione per ottenere le coordinate del punto proiettato nello spazio del dispositivo. <br>
+Questo procedimento consente di calcolare le coordinate del punto proiettato P′ sul piano di proiezione π utilizzando le coordinate omogenee (x, y, z, w) del punto P e il punto di vista E.
+</p>
+
+ <img src="Images\p1f.png" alt="Descrizione dell'immagine">
+<p></p>
+ <img src="Images\P12.png" alt="Descrizione dell'immagine">
+
+<p>Dove:<br>
+•P sono le coordinate del punto nello spazio del mondo.<br>
+•M_vista è la matrice di vista che trasforma le coordinate dallo spazio del mondo allo spazio della telecamera.<br>
+•M_proiezione è la matrice di proiezione che applica la proiezione prospettica o ortografica.<br>
+•P′ sono le coordinate del punto proiettato nello spazio del dispositivo.<br>
+Quando un punto nello spazio tridimensionale viene rappresentato utilizzando coordinate omogenee (x, y, z, w) e viene moltiplicato per la matrice di proiezione e la matrice di vista, il risultato è un vettore omogeneo in 4D. <br>
+Tuttavia, per rappresentare il punto su uno schermo bidimensionale, abbiamo solo bisogno delle coordinate bidimensionali (x, y), non delle coordinate z e w. <br>
+
+La coordinata w nelle coordinate omogenee viene utilizzata per mantenere la prospettiva corretta durante la proiezione.<br>
+ Quindi, dividendo i primi tre numeri del vettore omogeneo per w, otteniamo le coordinate tridimensionali (x, y, z) del punto.  <br>
+
+La coordinata z non è direttamente coinvolta nel calcolo delle coordinate sul piano proiettivo perché è utilizzata per determinare la profondità del punto nello spazio 3D, ma non è necessaria per rappresentare il punto sullo schermo. <br>
+
+I punti più vicini alla telecamera avranno una coordinata z più piccola e appariranno più grandi sullo schermo, mentre i punti più lontani avranno una coordinata z più grande e appariranno più piccoli. Questo processo di regolazione della dimensione in base alla distanza è fondamentale per creare un effetto di prospettiva realistico. <br>
+
+Inoltre, la coordinata z viene utilizzata anche per calcolare la posizione del punto sul piano proiettivo rispetto agli altri punti nella scena. Questo garantisce che i punti siano correttamente posizionati rispetto alla loro profondità nella scena, contribuendo così alla percezione tridimensionale della scena proiettata sul piano bidimensionale dello schermo. <br>
+
+Quindi la coordinata z è coinvolta nel determinare la dimensione apparente e la posizione relativa del punto sul piano proiettivo, garantendo così una rappresentazione accurata e realistica della scena tridimensionale sullo schermo bidimensionale.  <br>
+
+La prospettiva del nemico rappresenta la vista del campo di battaglia dal punto di vista avversario, mostrando esclusivamente le navi affondate. Questa prospettiva viene utilizzata per visualizzare il campo di gioco nemico sullo schermo. <br>
+Entrambi i metodi possono essere utilizzati per calcolare le coordinate del punto proiettato sul piano di proiezione, ma differiscono nell'approccio e nella metodologia. Il primo metodo è più esplicito nei calcoli matematici, mentre il secondo metodo è più comune nell'implementazione pratica usando librerie grafiche. <br>
+</p>
+
+<p><strong>Conclusioni</strong><br>
+In conclusione, l'applicazione della geometria proiettiva nel nostro progetto di battaglia navale su Unity ci permette di creare una rappresentazione realistica delle viste tra il piano di gioco e il punto di vista del nemico. Le prospettività utilizzate, in particolare la proiezione prospettica, contribuiscono a migliorare l'esperienza di gioco fornendo un'accurata visualizzazione tridimensionale delle navi e dell'ambiente circostante.</p>
+
+</div>
+<script>
+    function openHome() {
+        window.location.href = "index.html";
+    }
+
+    function openTeoria() {
+        window.location.href = "teoria.html";
+    }
+
+    function openManuale() {
+        window.location.href = "manuale.html";
+    }
+
+    function openGioco() {
+        window.location.href = "gioco.html";
+    }
+</script>
+
+</body>
+</html>
